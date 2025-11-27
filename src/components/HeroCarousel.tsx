@@ -41,8 +41,6 @@ export function HeroCarousel() {
                         className="object-cover"
                         priority={currentIndex === 0}
                     />
-                    {/* Overlay for better text readability */}
-                    <div className="absolute inset-0 bg-black/30" />
                 </motion.div>
             </AnimatePresence>
         </div>

@@ -1,27 +1,32 @@
 @import "tailwindcss";
 
 :root {
-  /* Vibrant & Friendly Palette */
+  /* Expert Designer Palette: "Sky & Coral" */
   --background: #ffffff;
-  --foreground: #171717;
-  
-  /* Primary: Warm Pink/Red */
-  --primary: #FF6B6B;
+  --foreground: #555555;
+
+  /* Primary: Vibrant Coral (Buttons/CTA) */
+  --primary: #FF7F50;
   --primary-foreground: #ffffff;
-  
-  /* Secondary: Sunny Yellow */
-  --secondary: #FFD93D;
-  --secondary-foreground: #171717;
-  
-  /* Accent: Sky Blue */
-  --accent: #4D96FF;
-  --accent-foreground: #ffffff;
-  
+
+  /* Secondary: Soft Sky Blue (Hero Block) */
+  --secondary: #C4E0F5;
+  --secondary-foreground: #1B4965;
+
+  /* Accent: Fresh Teal (Blocks/Cards) */
+  --accent: #A8DADC;
+  --accent-foreground: #1D3557;
+
+  /* Footer: Deep Celestial Blue */
+  --footer-bg: #1B4965;
+  --footer-fg: #ffffff;
+
   /* Neutral: Soft Gray */
   --muted: #f3f4f6;
-  --muted-foreground: #6b7280;
+  --muted-foreground: #888888;
 
-  --radius: 1.5rem; /* More rounded corners */
+  --radius: 1.5rem;
+  /* More rounded corners */
 }
 
 @theme inline {
@@ -35,7 +40,7 @@
   --color-accent-foreground: var(--accent-foreground);
   --color-muted: var(--muted);
   --color-muted-foreground: var(--muted-foreground);
-  
+
   --radius-lg: var(--radius);
   --radius-md: calc(var(--radius) - 2px);
   --radius-sm: calc(var(--radius) - 4px);
@@ -45,7 +50,8 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-sans);
-  overflow-x: hidden; /* Prevent horizontal scroll from blobs */
+  overflow-x: hidden;
+  /* Prevent horizontal scroll from blobs */
 }
 
 /* Organic Shapes & Utilities */
@@ -55,9 +61,17 @@ body {
 }
 
 @keyframes blob-bounce {
-  0% { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
-  50% { border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%; }
-  100% { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
+  0% {
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  }
+
+  50% {
+    border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+  }
+
+  100% {
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  }
 }
 
 .wavy-divider-top {

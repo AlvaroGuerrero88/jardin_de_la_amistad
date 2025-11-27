@@ -57,8 +57,8 @@ export function Navbar() {
                             key={link.href}
                             href={link.href}
                             className={`
-                                px-4 py-2 rounded-full text-sm font-medium transition-all hover:bg-primary/10 hover:text-primary
-                                ${isScrolled ? "text-gray-700" : "text-gray-800"}
+                                px-4 py-2 rounded-full text-base font-bold transition-all hover:bg-white/20 hover:text-white
+                                ${isScrolled ? "text-gray-700 hover:text-primary hover:bg-primary/10" : "text-white drop-shadow-md"}
                             `}
                         >
                             {link.name}

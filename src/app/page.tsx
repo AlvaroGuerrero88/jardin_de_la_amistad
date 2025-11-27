@@ -11,34 +11,26 @@ export default function Home() {
   return (
     <div className="flex flex-col min-h-screen overflow-x-hidden">
       {/* Hero Section */}
-      <section className="relative h-screen flex items-center justify-center overflow-hidden">
-        <HeroCarousel />
+      <section className="relative min-h-screen flex flex-col md:flex-row overflow-hidden">
+        {/* Left Content - Text */}
+        <div className="flex-none w-full md:w-[40%] flex items-center justify-center bg-[#C4E0F5] relative z-10 py-20 px-4 md:px-12 lg:px-20">
+          {/* Background Pattern/Gradient for Text Area */}
+          <div className="absolute inset-0 bg-gradient-to-br from-white/40 to-transparent pointer-events-none" />
 
-        {/* Organic Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-white/10 pointer-events-none" />
-
-        {/* Wavy Bottom Divider - Adjusted z-index to not split image weirdly */}
-        <div className="absolute bottom-0 left-0 w-full overflow-hidden leading-none z-20 pointer-events-none">
-          <svg className="relative block w-[calc(100%+1.3px)] h-[60px] md:h-[100px] rotate-180" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-            <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" className="fill-white"></path>
-          </svg>
-        </div>
-
-        <div className="container relative z-10 px-4 md:px-8 text-center mt-20">
           <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
+            initial={{ opacity: 0, x: -30 }}
+            animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
-            className="p-8 md:p-12 rounded-[3rem] inline-block max-w-4xl"
+            className="max-w-2xl text-center md:text-left relative z-20"
           >
             <motion.div
               initial={{ y: 20, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: 0.3 }}
             >
-              <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 tracking-tight drop-shadow-[0_4px_4px_rgba(0,0,0,0.5)] font-display">
+              <h1 className="text-5xl md:text-7xl font-bold text-[#1B4965] mb-6 tracking-tight drop-shadow-sm font-display leading-tight">
                 Bienvenidos al <br />
-                <span className="text-secondary inline-block mt-2 transform -rotate-2">Jardín de la Amistad</span>
+                <span className="text-[#FF7F50] inline-block mt-2 drop-shadow-sm bg-white/90 px-4 rounded-lg transform -rotate-1">Jardín de la Amistad</span>
               </h1>
             </motion.div>
 
@@ -46,7 +38,7 @@ export default function Home() {
               initial={{ y: 20, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: 0.5 }}
-              className="text-xl md:text-2xl text-white mb-10 max-w-2xl mx-auto drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)] font-medium"
+              className="text-xl md:text-2xl text-[#1B4965]/80 mb-10 drop-shadow-sm font-medium leading-relaxed"
             >
               Un espacio lleno de amor, aprendizaje y diversión para el desarrollo integral de tus hijos.
             </motion.p>
@@ -55,13 +47,25 @@ export default function Home() {
               initial={{ y: 20, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: 0.7 }}
-              className="flex justify-center"
+              className="flex justify-center md:justify-start"
             >
-              <Button asChild size="lg" className="text-lg bg-primary hover:bg-primary/90 text-white px-10 py-7 h-auto rounded-full shadow-xl hover:scale-105 hover:rotate-1 transition-all duration-300 border-4 border-white/20">
+              <Button asChild size="lg" className="text-lg bg-primary hover:bg-primary/90 text-white px-10 py-7 h-auto rounded-full shadow-xl hover:scale-105 hover:rotate-1 transition-all duration-300 border-4 border-white/10">
                 <Link href="/contacto">Solicita una visita guiada</Link>
               </Button>
             </motion.div>
           </motion.div>
+        </div>
+
+        {/* Right Content - Image Carousel */}
+        <div className="flex-none w-full md:w-[60%] relative min-h-[50vh] md:min-h-screen">
+          <HeroCarousel />
+        </div>
+
+        {/* Unified Wavy Bottom Divider - Spans entire section */}
+        <div className="absolute bottom-0 left-0 w-full overflow-hidden leading-none z-30 pointer-events-none">
+          <svg className="relative block w-[calc(100%+1.3px)] h-[50px] md:h-[80px] rotate-180" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" className="fill-white"></path>
+          </svg>
         </div>
       </section>
 
