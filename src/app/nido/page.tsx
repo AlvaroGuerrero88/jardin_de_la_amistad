@@ -18,7 +18,7 @@ export default function NidoPage() {
     return (
         <div className="min-h-screen bg-white">
             {/* Hero */}
-            <section className="relative py-20 bg-blue-50">
+            <section className="relative pt-32 pb-20 bg-blue-50">
                 <div className="container mx-auto px-4 md:px-8">
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
@@ -41,24 +41,25 @@ export default function NidoPage() {
             {/* Methodology */}
             <Section>
                 <div className="text-center mb-16">
-                    <h2 className="text-3xl font-bold text-gray-900 mb-8">Nuestra Metodología</h2>
+                    <h2 className="text-3xl font-bold text-gray-900 mb-12">Nuestra Metodología</h2>
 
-                    <div className="flex flex-col items-center justify-center mb-8">
+                    <div className="flex flex-col md:flex-row items-center justify-center gap-6 mb-8">
+                        <h3 className="text-2xl md:text-3xl font-bold text-blue-600 leading-tight text-center md:text-right max-w-2xl">
+                            <span className="whitespace-nowrap">"En nuestro nido los niños vienen a</span><br />
+                            <span className="whitespace-nowrap">construir conocimiento, no a memorizarlo."</span>
+                        </h3>
                         <img
                             src="/images/active-learning-logo.png"
                             alt="Active Learning Logo"
-                            className="h-32 md:h-40 object-contain mb-6"
+                            className="h-24 md:h-28 object-contain"
                         />
-                        <h3 className="text-2xl md:text-3xl font-bold text-blue-600 max-w-4xl mx-auto leading-tight">
-                            "En nuestro nido los niños vienen a construir conocimiento, no a memorizarlo."
-                        </h3>
                     </div>
 
                     <div className="max-w-4xl mx-auto text-lg text-gray-700 leading-relaxed space-y-6 text-left md:text-center">
                         <p>
                             Active Learning es el resultado de varios años de estudios e investigación, donde los avances de la neurociencia nos invitan a dejar la “escuela tradicional” y apostar por una educación que privilegie situaciones de aprendizaje reales, donde los niños pueden manipular y explorar materiales.
                         </p>
-                        <p>
+                        <p className="mb-0">
                             En el Jardín de la Amistad ellos juegan, conversan y se divierten mientras aprenden. Nuestro Proyecto Educativo Active Learning tiene como principal objetivo fomentar un pensamiento ingenioso y flexible, capaz de resolver problemas. Para ello, las maestras del Jardín de la Amistad a través de preguntas y múltiples materiales invitan a los niños a reflexionar, imaginar y crear en función a sus propios intereses.
                         </p>
                     </div>
@@ -193,39 +194,55 @@ export default function NidoPage() {
                             Nuestra propuesta educativa se estructura en programas diseñados para el desarrollo integral:
                         </p>
 
-                        <Accordion className="space-y-2">
+                        <Accordion className="space-y-3">
                             {[
                                 {
                                     title: "PROGRAMA DE LENGUAJE",
-                                    content: "Todas las mañanas dedicamos un espacio para disfrutar y aprender adivinanzas, trabalenguas, poesías, entre otros juegos lingüísticos. El elemento lúdico siempre presente en nuestras sesiones de aprendizaje posibilita la exploración y el juego con el lenguaje. Para nuestros niños el aprendizaje de canciones, chistes así como realizar ejercicios de praxias y soplo, resultan experiencias muy placenteras."
+                                    content: "Todas las mañanas dedicamos un espacio para disfrutar y aprender adivinanzas, trabalenguas, poesías, entre otros juegos lingüísticos. El elemento lúdico siempre presente en nuestras sesiones de aprendizaje posibilita la exploración y el juego con el lenguaje. Para nuestros niños el aprendizaje de canciones, chistes así como realizar ejercicios de praxias y soplo, resultan experiencias muy placenteras.",
+                                    icon: "🗣️",
+                                    color: "bg-orange-100 text-orange-600"
                                 },
                                 {
                                     title: "PROGRAMA DE LECTURA EN VOZ ALTA Y BIBLIOTECA",
-                                    content: "Gracias a la implementación de bibliotecas en cada una de nuestras sedes, en nuestro institución la lectura es cosa de todos los días. La lectura en voz alta desarrolla habilidades lectoras y escritoras, y sobretodo ayuda a los niños a apasionarse por los libros​. Esta actividad es una celebración de la lectura, acompañada de rituales y ceremonias que ayudan a los niños a vivir la lectura como un momento mágico."
+                                    content: "Gracias a la implementación de bibliotecas en cada una de nuestras sedes, en nuestro institución la lectura es cosa de todos los días. La lectura en voz alta desarrolla habilidades lectoras y escritoras, y sobretodo ayuda a los niños a apasionarse por los libros​. Esta actividad es una celebración de la lectura, acompañada de rituales y ceremonias que ayudan a los niños a vivir la lectura como un momento mágico.",
+                                    icon: "📚",
+                                    color: "bg-blue-100 text-blue-600"
                                 },
                                 {
                                     title: "PROGRAMA DE JUEGOS COLECTIVOS",
-                                    content: "En el programa de juegos colectivos los niños aprenden a coordinar puntos de vista, desarrollan la tolerancia a la frustración y capacidades para la democracia dentro de un contexto socioemocional seguro. A diferencia del juego libre o individual, los juegos colectivos implican el seguimiento de reglas y llegar a acuerdos. Estos juegos resultan muy retadores para los niños pequeños pues se caracterizan por un pensamiento egocéntrico. De esta manera, los niños del Jardín de la Amistad tienen oportunidades para desarrollar un pensamiento más descentrado, más socializado y más coordinado."
+                                    content: "En el programa de juegos colectivos los niños aprenden a coordinar puntos de vista, desarrollan la tolerancia a la frustración y capacidades para la democracia dentro de un contexto socioemocional seguro. A diferencia del juego libre o individual, los juegos colectivos implican el seguimiento de reglas y llegar a acuerdos. Estos juegos resultan muy retadores para los niños pequeños pues se caracterizan por un pensamiento egocéntrico. De esta manera, los niños del Jardín de la Amistad tienen oportunidades para desarrollar un pensamiento más descentrado, más socializado y más coordinado.",
+                                    icon: "🤝",
+                                    color: "bg-green-100 text-green-600"
                                 },
                                 {
                                     title: "PROGRAMA DE MATEMÁTICA",
-                                    content: "El objetivo de nuestro programa es que la enseñanza de la matemática deje de ser rígida y sea una propuesta aplicada y pensada para un mundo cotidiano. Considerando el dominio de la matemática como un ejercicio para lograr la ciudadanía y esto requiere no solo conocer el lenguaje matemático y hechos, conceptos y algoritmos, sino también procesos más complejos como la matematización de situaciones y la resolución de problemas."
+                                    content: "El objetivo de nuestro programa es que la enseñanza de la matemática deje de ser rígida y sea una propuesta aplicada y pensada para un mundo cotidiano. Considerando el dominio de la matemática como un ejercicio para lograr la ciudadanía y esto requiere no solo conocer el lenguaje matemático y hechos, conceptos y algoritmos, sino también procesos más complejos como la matematización de situaciones y la resolución de problemas.",
+                                    icon: "🔢",
+                                    color: "bg-purple-100 text-purple-600"
                                 },
                                 {
                                     title: "JUEGO-TRABAJO EN SECTORES",
-                                    content: "Los sectores de aprendizaje permiten a los niños trabajar según sus propios intereses. Todos los días nuestros niños escogen en qué sector de aprendizaje les gustaría trabajar y en función a ello investigan, juegan y aprenden en equipo. Cada sector está cuidadosamente diseñado para proporcionar experiencias retadoras y concretas a los niños, donde favorecemos el pensamiento crítitco creativo, el aprendizaje autónomo y la capacidad para la toma de decisiones."
+                                    content: "Los sectores de aprendizaje permiten a los niños trabajar según sus propios intereses. Todos los días nuestros niños escogen en qué sector de aprendizaje les gustaría trabajar y en función a ello investigan, juegan y aprenden en equipo. Cada sector está cuidadosamente diseñado para proporcionar experiencias retadoras y concretas a los niños, donde favorecemos el pensamiento crítitco creativo, el aprendizaje autónomo y la capacidad para la toma de decisiones.",
+                                    icon: "🏗️",
+                                    color: "bg-yellow-100 text-yellow-700"
                                 },
                                 {
                                     title: "PROGRAMA DE CONCIENCIA FONOLÓGICA",
-                                    content: "El objetivo de este programa es brindar a los niños muchas oportunidades para empezar el reconocimiento de las letras y sus sonidos, a través de situaciones lúdicas pero al mismo tiempo están enmarcados dentro de un evento con propósito comunicativo. Diversas investigaciones demuestran que el desarrollo de la conciencia fonológica es una variable potente para la adquisición de la lectura y escritura."
+                                    content: "El objetivo de este programa es brindar a los niños muchas oportunidades para empezar el reconocimiento de las letras y sus sonidos, a través de situaciones lúdicas pero al mismo tiempo están enmarcados dentro de un evento con propósito comunicativo. Diversas investigaciones demuestran que el desarrollo de la conciencia fonológica es una variable potente para la adquisición de la lectura y escritura.",
+                                    icon: "👂",
+                                    color: "bg-pink-100 text-pink-600"
                                 },
                                 {
                                     title: "PROGRAMA DE AUTONOMÍA",
-                                    content: "Uno de los principios de nuestra propuesta es desarrollar en los niños hábitos y actitudes que le permitan desarrollarse con independencia y seguridad, ambas condiciones básicas para el éxito en la vida. Un niño autónomo es un niño feliz, seguro y capaz de realizar acciones por sí mismo. Por ello, generamos oportunidades e implementamos ambientes que favorezcan los proyectos de acción de cada niño, donde validamos sus iniciativas y deseos."
+                                    content: "Uno de los principios de nuestra propuesta es desarrollar en los niños hábitos y actitudes que le permitan desarrollarse con independencia y seguridad, ambas condiciones básicas para el éxito en la vida. Un niño autónomo es un niño feliz, seguro y capaz de realizar acciones por sí mismo. Por ello, generamos oportunidades e implementamos ambientes que favorezcan los proyectos de acción de cada niño, donde validamos sus iniciativas y deseos.",
+                                    icon: "🌟",
+                                    color: "bg-teal-100 text-teal-600"
                                 },
                                 {
                                     title: "FORMACIÓN PARA LA CONVIVENCIA Y VALORES",
-                                    content: "Este programa propone actividades en familia donde se promueve la formación y fortalecimiento de hábitos básicos, así como el reconocimiento y la expresión saludable de diversas emociones."
+                                    content: "Este programa propone actividades en familia donde se promueve la formación y fortalecimiento de hábitos básicos, así como el reconocimiento y la expresión saludable de diversas emociones.",
+                                    icon: "❤️",
+                                    color: "bg-red-100 text-red-600"
                                 }
                             ].map((program, index) => (
                                 <AccordionItem
@@ -233,6 +250,8 @@ export default function NidoPage() {
                                     title={program.title}
                                     isOpen={openItem === program.title}
                                     onClick={() => handleToggle(program.title)}
+                                    icon={<span className="text-2xl">{program.icon}</span>}
+                                    color={program.color}
                                 >
                                     {program.content}
                                 </AccordionItem>
