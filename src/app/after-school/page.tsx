@@ -78,7 +78,7 @@ export default function AfterSchoolPage() {
                         <div className="space-y-4">
                             <div className="flex items-center justify-between bg-white p-4 rounded-lg shadow-sm">
                                 <span className="font-medium">Turno Tarde</span>
-                                <span className="text-green-600 font-bold">2:00 PM - 6:00 PM</span>
+                                <span className="text-green-600 font-bold">1:00 PM - 4:30 PM</span>
                             </div>
                             <div className="flex items-center justify-between bg-white p-4 rounded-lg shadow-sm">
                                 <span className="font-medium">Talleres Específicos</span>
@@ -88,7 +88,7 @@ export default function AfterSchoolPage() {
                         <div className="mt-8">
                             <h4 className="font-bold mb-2">Incluye:</h4>
                             <ul className="list-disc list-inside text-gray-600 space-y-2">
-                                <li>Refrigerio saludable (opcional)</li>
+
                                 <li>Materiales para talleres</li>
                                 <li>Supervisión permanente</li>
                             </ul>
