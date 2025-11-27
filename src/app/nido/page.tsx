@@ -5,8 +5,16 @@ import { Section } from "@/components/ui/section";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { Palette, Music, Globe, Brain, Sun, Users, Apple, Footprints, BookOpen, Home } from "lucide-react";
+import { Accordion, AccordionItem } from "@/components/ui/accordion";
+import { useState } from "react";
 
 export default function NidoPage() {
+    const [openItem, setOpenItem] = useState<string | null>(null);
+
+    const handleToggle = (title: string) => {
+        setOpenItem(openItem === title ? null : title);
+    };
+
     return (
         <div className="min-h-screen bg-white">
             {/* Hero */}
@@ -33,54 +41,27 @@ export default function NidoPage() {
             {/* Methodology */}
             <Section>
                 <div className="text-center mb-16">
-                    <h2 className="text-3xl font-bold text-gray-900 mb-4">Nuestra Metodología</h2>
-                    <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                        Aprendizaje basado en proyectos y experiencias vivenciales.
-                    </p>
-                </div>
+                    <h2 className="text-3xl font-bold text-gray-900 mb-8">Nuestra Metodología</h2>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                    {[
-                        {
-                            title: "Arte y Creatividad",
-                            desc: "Expresión libre a través de diversas técnicas plásticas.",
-                            icon: Palette,
-                            color: "text-purple-600 bg-purple-100"
-                        },
-                        {
-                            title: "Música y Movimiento",
-                            desc: "Desarrollo del ritmo, coordinación y expresión corporal.",
-                            icon: Music,
-                            color: "text-pink-600 bg-pink-100"
-                        },
-                        {
-                            title: "Inglés Intensivo",
-                            desc: "Inmersión natural en el idioma a través de juegos y canciones.",
-                            icon: Globe,
-                            color: "text-blue-600 bg-blue-100"
-                        },
-                        {
-                            title: "Pensamiento Lógico",
-                            desc: "Actividades pre-matemáticas y resolución de problemas.",
-                            icon: Brain,
-                            color: "text-green-600 bg-green-100"
-                        }
-                    ].map((item, i) => (
-                        <motion.div
-                            key={i}
-                            initial={{ opacity: 0, scale: 0.9 }}
-                            whileInView={{ opacity: 1, scale: 1 }}
-                            transition={{ delay: i * 0.1 }}
-                            viewport={{ once: true }}
-                            className="text-center p-6 rounded-xl border border-gray-100 hover:shadow-md transition-all"
-                        >
-                            <div className={`w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-4 ${item.color}`}>
-                                <item.icon className="h-8 w-8" />
-                            </div>
-                            <h3 className="text-xl font-bold mb-2">{item.title}</h3>
-                            <p className="text-gray-600">{item.desc}</p>
-                        </motion.div>
-                    ))}
+                    <div className="flex flex-col items-center justify-center mb-8">
+                        <img
+                            src="/images/active-learning-logo.png"
+                            alt="Active Learning Logo"
+                            className="h-32 md:h-40 object-contain mb-6"
+                        />
+                        <h3 className="text-2xl md:text-3xl font-bold text-blue-600 max-w-4xl mx-auto leading-tight">
+                            "En nuestro nido los niños vienen a construir conocimiento, no a memorizarlo."
+                        </h3>
+                    </div>
+
+                    <div className="max-w-4xl mx-auto text-lg text-gray-700 leading-relaxed space-y-6 text-left md:text-center">
+                        <p>
+                            Active Learning es el resultado de varios años de estudios e investigación, donde los avances de la neurociencia nos invitan a dejar la “escuela tradicional” y apostar por una educación que privilegie situaciones de aprendizaje reales, donde los niños pueden manipular y explorar materiales.
+                        </p>
+                        <p>
+                            En el Jardín de la Amistad ellos juegan, conversan y se divierten mientras aprenden. Nuestro Proyecto Educativo Active Learning tiene como principal objetivo fomentar un pensamiento ingenioso y flexible, capaz de resolver problemas. Para ello, las maestras del Jardín de la Amistad a través de preguntas y múltiples materiales invitan a los niños a reflexionar, imaginar y crear en función a sus propios intereses.
+                        </p>
+                    </div>
                 </div>
             </Section>
 
@@ -207,28 +188,57 @@ export default function NidoPage() {
                         viewport={{ once: true }}
                         className="bg-white p-8 rounded-[2rem] shadow-xl border border-gray-100"
                     >
-                        <h3 className="text-2xl font-bold text-gray-900 mb-6">Enfoque Integral</h3>
+                        <h3 className="text-2xl font-bold text-gray-900 mb-6">Programas</h3>
                         <p className="text-gray-600 mb-8">
-                            Más allá de lo académico, nos enfocamos en el ser. Nuestro programa Nido cultiva:
+                            Nuestra propuesta educativa se estructura en programas diseñados para el desarrollo integral:
                         </p>
-                        <ul className="space-y-6">
+
+                        <Accordion className="space-y-2">
                             {[
-                                { title: "Autonomía", desc: "Fomentamos que los niños tomen decisiones y resuelvan problemas por sí mismos." },
-                                { title: "Habilidades Sociales", desc: "Aprenden a compartir, negociar y empatizar con sus compañeros." },
-                                { title: "Curiosidad Intelectual", desc: "Mantenemos viva la llama del '¿por qué?' a través de la investigación." },
-                                { title: "Inteligencia Emocional", desc: "Validamos sus emociones y les damos herramientas para gestionarlas." }
-                            ].map((item, i) => (
-                                <li key={i} className="flex gap-4">
-                                    <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0 text-blue-600 font-bold">
-                                        {i + 1}
-                                    </div>
-                                    <div>
-                                        <h4 className="font-bold text-gray-900 mb-1">{item.title}</h4>
-                                        <p className="text-sm text-gray-600">{item.desc}</p>
-                                    </div>
-                                </li>
+                                {
+                                    title: "PROGRAMA DE LENGUAJE",
+                                    content: "Todas las mañanas dedicamos un espacio para disfrutar y aprender adivinanzas, trabalenguas, poesías, entre otros juegos lingüísticos. El elemento lúdico siempre presente en nuestras sesiones de aprendizaje posibilita la exploración y el juego con el lenguaje. Para nuestros niños el aprendizaje de canciones, chistes así como realizar ejercicios de praxias y soplo, resultan experiencias muy placenteras."
+                                },
+                                {
+                                    title: "PROGRAMA DE LECTURA EN VOZ ALTA Y BIBLIOTECA",
+                                    content: "Gracias a la implementación de bibliotecas en cada una de nuestras sedes, en nuestro institución la lectura es cosa de todos los días. La lectura en voz alta desarrolla habilidades lectoras y escritoras, y sobretodo ayuda a los niños a apasionarse por los libros​. Esta actividad es una celebración de la lectura, acompañada de rituales y ceremonias que ayudan a los niños a vivir la lectura como un momento mágico."
+                                },
+                                {
+                                    title: "PROGRAMA DE JUEGOS COLECTIVOS",
+                                    content: "En el programa de juegos colectivos los niños aprenden a coordinar puntos de vista, desarrollan la tolerancia a la frustración y capacidades para la democracia dentro de un contexto socioemocional seguro. A diferencia del juego libre o individual, los juegos colectivos implican el seguimiento de reglas y llegar a acuerdos. Estos juegos resultan muy retadores para los niños pequeños pues se caracterizan por un pensamiento egocéntrico. De esta manera, los niños del Jardín de la Amistad tienen oportunidades para desarrollar un pensamiento más descentrado, más socializado y más coordinado."
+                                },
+                                {
+                                    title: "PROGRAMA DE MATEMÁTICA",
+                                    content: "El objetivo de nuestro programa es que la enseñanza de la matemática deje de ser rígida y sea una propuesta aplicada y pensada para un mundo cotidiano. Considerando el dominio de la matemática como un ejercicio para lograr la ciudadanía y esto requiere no solo conocer el lenguaje matemático y hechos, conceptos y algoritmos, sino también procesos más complejos como la matematización de situaciones y la resolución de problemas."
+                                },
+                                {
+                                    title: "JUEGO-TRABAJO EN SECTORES",
+                                    content: "Los sectores de aprendizaje permiten a los niños trabajar según sus propios intereses. Todos los días nuestros niños escogen en qué sector de aprendizaje les gustaría trabajar y en función a ello investigan, juegan y aprenden en equipo. Cada sector está cuidadosamente diseñado para proporcionar experiencias retadoras y concretas a los niños, donde favorecemos el pensamiento crítitco creativo, el aprendizaje autónomo y la capacidad para la toma de decisiones."
+                                },
+                                {
+                                    title: "PROGRAMA DE CONCIENCIA FONOLÓGICA",
+                                    content: "El objetivo de este programa es brindar a los niños muchas oportunidades para empezar el reconocimiento de las letras y sus sonidos, a través de situaciones lúdicas pero al mismo tiempo están enmarcados dentro de un evento con propósito comunicativo. Diversas investigaciones demuestran que el desarrollo de la conciencia fonológica es una variable potente para la adquisición de la lectura y escritura."
+                                },
+                                {
+                                    title: "PROGRAMA DE AUTONOMÍA",
+                                    content: "Uno de los principios de nuestra propuesta es desarrollar en los niños hábitos y actitudes que le permitan desarrollarse con independencia y seguridad, ambas condiciones básicas para el éxito en la vida. Un niño autónomo es un niño feliz, seguro y capaz de realizar acciones por sí mismo. Por ello, generamos oportunidades e implementamos ambientes que favorezcan los proyectos de acción de cada niño, donde validamos sus iniciativas y deseos."
+                                },
+                                {
+                                    title: "FORMACIÓN PARA LA CONVIVENCIA Y VALORES",
+                                    content: "Este programa propone actividades en familia donde se promueve la formación y fortalecimiento de hábitos básicos, así como el reconocimiento y la expresión saludable de diversas emociones."
+                                }
+                            ].map((program, index) => (
+                                <AccordionItem
+                                    key={index}
+                                    title={program.title}
+                                    isOpen={openItem === program.title}
+                                    onClick={() => handleToggle(program.title)}
+                                >
+                                    {program.content}
+                                </AccordionItem>
                             ))}
-                        </ul>
+                        </Accordion>
+
                         <div className="mt-10 pt-8 border-t border-gray-100 text-center">
                             <Button asChild size="lg" className="w-full bg-blue-600 hover:bg-blue-700 text-lg py-6 rounded-xl">
                                 <Link href="/contacto">Agenda una Visita Hoy</Link>
