@@ -10,7 +10,7 @@ export default function TalleresVeranoPage() {
     return (
         <div className="min-h-screen bg-white">
             {/* Hero */}
-            <section className="relative py-20 bg-orange-50 overflow-hidden">
+            <section className="relative pt-32 pb-20 bg-orange-50 overflow-hidden">
                 {/* Background Elements */}
                 <div className="absolute top-0 right-0 w-64 h-64 bg-yellow-200 rounded-full mix-blend-multiply filter blur-3xl opacity-50 animate-blob" />
                 <div className="absolute bottom-0 left-0 w-64 h-64 bg-orange-200 rounded-full mix-blend-multiply filter blur-3xl opacity-50 animate-blob animation-delay-2000" />
@@ -60,11 +60,53 @@ export default function TalleresVeranoPage() {
             {/* Programs */}
             <Section>
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-                    {/* Verano de Aventuras */}
+                    {/* Verano Mágico (1 a 2 años) - Now First */}
                     <motion.div
                         initial={{ opacity: 0, x: -20 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
+                        className="bg-purple-50 rounded-[2.5rem] p-8 md:p-12 border-2 border-purple-100 relative overflow-hidden group hover:shadow-xl transition-all duration-300"
+                    >
+                        <div className="absolute top-0 right-0 bg-purple-200 w-32 h-32 rounded-bl-[100%] opacity-50 transition-transform group-hover:scale-110" />
+
+                        <div className="relative z-10">
+                            <div className="inline-block bg-white px-4 py-2 rounded-full text-purple-600 font-bold text-sm mb-6 shadow-sm">
+                                1 a 2 años
+                            </div>
+                            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 flex items-center gap-3">
+                                <Sparkles className="text-purple-600 h-8 w-8" />
+                                Verano Mágico
+                            </h2>
+                            <p className="text-lg text-gray-700 mb-8 leading-relaxed">
+                                Un espacio especialmente diseñado para los más pequeños, donde podrán vivir experiencias sensoriales, psicomotoras y musicales en compañía de maestras especializadas. Un entorno cálido y seguro para que exploren el mundo con libertad.
+                            </p>
+
+                            <h3 className="font-bold text-xl text-gray-900 mb-6">¿Qué incluye?</h3>
+                            <ul className="space-y-4">
+                                {[
+                                    { text: "Actividades sensoriales y de exploración", icon: Baby },
+                                    { text: "Juegos de movimiento y coordinación", icon: Footprints },
+                                    { text: "Música, ritmo y expresión", icon: Music },
+                                    { text: "Materiales adecuados para su etapa de desarrollo", icon: Palette },
+                                    { text: "Grupos reducidos y atención personalizada", icon: Users }
+                                ].map((item, i) => (
+                                    <li key={i} className="flex items-center bg-white/60 p-3 rounded-xl">
+                                        <div className="bg-purple-100 p-2 rounded-full mr-4 text-purple-600">
+                                            <item.icon className="h-5 w-5" />
+                                        </div>
+                                        <span className="text-gray-700 font-medium">{item.text}</span>
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+                    </motion.div>
+
+                    {/* Verano de Aventuras (3 a 6 años) - Now Second */}
+                    <motion.div
+                        initial={{ opacity: 0, x: 20 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ delay: 0.2 }}
                         className="bg-green-50 rounded-[2.5rem] p-8 md:p-12 border-2 border-green-100 relative overflow-hidden group hover:shadow-xl transition-all duration-300"
                     >
                         <div className="absolute top-0 right-0 bg-green-200 w-32 h-32 rounded-bl-[100%] opacity-50 transition-transform group-hover:scale-110" />
@@ -93,48 +135,6 @@ export default function TalleresVeranoPage() {
                                 ].map((item, i) => (
                                     <li key={i} className="flex items-center bg-white/60 p-3 rounded-xl">
                                         <div className="bg-green-100 p-2 rounded-full mr-4 text-green-600">
-                                            <item.icon className="h-5 w-5" />
-                                        </div>
-                                        <span className="text-gray-700 font-medium">{item.text}</span>
-                                    </li>
-                                ))}
-                            </ul>
-                        </div>
-                    </motion.div>
-
-                    {/* Verano Mágico */}
-                    <motion.div
-                        initial={{ opacity: 0, x: 20 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ delay: 0.2 }}
-                        className="bg-purple-50 rounded-[2.5rem] p-8 md:p-12 border-2 border-purple-100 relative overflow-hidden group hover:shadow-xl transition-all duration-300"
-                    >
-                        <div className="absolute top-0 right-0 bg-purple-200 w-32 h-32 rounded-bl-[100%] opacity-50 transition-transform group-hover:scale-110" />
-
-                        <div className="relative z-10">
-                            <div className="inline-block bg-white px-4 py-2 rounded-full text-purple-600 font-bold text-sm mb-6 shadow-sm">
-                                1 a 2 años
-                            </div>
-                            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 flex items-center gap-3">
-                                <Sparkles className="text-purple-600 h-8 w-8" />
-                                Verano Mágico
-                            </h2>
-                            <p className="text-lg text-gray-700 mb-8 leading-relaxed">
-                                Un espacio especialmente diseñado para los más pequeños, donde podrán vivir experiencias sensoriales, psicomotoras y musicales en compañía de maestras especializadas. Un entorno cálido y seguro para que exploren el mundo con libertad.
-                            </p>
-
-                            <h3 className="font-bold text-xl text-gray-900 mb-6">¿Qué incluye?</h3>
-                            <ul className="space-y-4">
-                                {[
-                                    { text: "Actividades sensoriales y de exploración", icon: Baby },
-                                    { text: "Juegos de movimiento y coordinación", icon: Footprints },
-                                    { text: "Música, ritmo y expresión", icon: Music },
-                                    { text: "Materiales adecuados para su etapa de desarrollo", icon: Palette },
-                                    { text: "Grupos reducidos y atención personalizada", icon: Users }
-                                ].map((item, i) => (
-                                    <li key={i} className="flex items-center bg-white/60 p-3 rounded-xl">
-                                        <div className="bg-purple-100 p-2 rounded-full mr-4 text-purple-600">
                                             <item.icon className="h-5 w-5" />
                                         </div>
                                         <span className="text-gray-700 font-medium">{item.text}</span>
