@@ -30,7 +30,7 @@ export default function Home() {
             >
               <h1 className="text-5xl md:text-7xl font-bold text-[#1B4965] mb-6 tracking-tight drop-shadow-sm font-display leading-tight">
                 Bienvenidos al <br />
-                <span className="text-[#FF7F50] inline-block mt-2 drop-shadow-sm bg-white/90 px-4 rounded-lg transform -rotate-1">Jardín de la Amistad</span>
+                <span className="text-[#FF7F50] inline-block mt-2 drop-shadow-sm bg-white/90 px-4 rounded-lg">Jardín de la Amistad</span>
               </h1>
             </motion.div>
 
