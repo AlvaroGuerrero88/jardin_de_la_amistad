@@ -21,7 +21,7 @@ export default function AfterSchoolPage() {
                             After School
                         </h1>
                         <p className="text-xl text-gray-600 mb-8">
-                            Un espacio divertido y productivo para las tardes. Apoyo escolar, talleres artísticos y deportivos en un ambiente seguro.
+                            Un espacio pensado para acompañar a nuestros niños y niñas del nido durante la tarde, en un ambiente seguro, cálido y con propuestas acordes a su etapa.
                         </p>
                         <Button asChild size="lg" className="bg-green-600 hover:bg-green-700">
                             <Link href="/contacto">Consultar Horarios</Link>
@@ -42,20 +42,20 @@ export default function AfterSchoolPage() {
                         <div className="space-y-6">
                             {[
                                 {
-                                    title: "Apoyo en Tareas",
-                                    desc: "Acompañamiento personalizado para reforzar lo aprendido en el colegio.",
+                                    title: "Juego Libre Acompañado",
+                                    desc: "Espacios preparados donde pueden explorar, crear y disfrutar según sus intereses.",
                                     icon: BookOpen,
                                     color: "text-blue-600 bg-blue-100"
                                 },
                                 {
-                                    title: "Talleres Artísticos",
-                                    desc: "Pintura, manualidades y expresión creativa.",
+                                    title: "Talleres Creativos",
+                                    desc: "Pequeñas propuestas de arte, música, movimiento o cuentos.",
                                     icon: Music,
                                     color: "text-pink-600 bg-pink-100"
                                 },
                                 {
-                                    title: "Juegos y Socialización",
-                                    desc: "Dinámicas grupales para fortalecer habilidades sociales.",
+                                    title: "Socialización y Dinámicas Grupales",
+                                    desc: "Momentos para compartir, esperar turnos, conversar y vincularse con otros niños.",
                                     icon: Users,
                                     color: "text-yellow-600 bg-yellow-100"
                                 }
@@ -89,8 +89,9 @@ export default function AfterSchoolPage() {
                             <h4 className="font-bold mb-2">Incluye:</h4>
                             <ul className="list-disc list-inside text-gray-600 space-y-2">
 
-                                <li>Materiales para talleres</li>
-                                <li>Supervisión permanente</li>
+                                <li>Supervisión constante por parte de nuestras docentes.</li>
+                                <li>Materiales para actividades.</li>
+                                <li>Comunicación fluida con las familias.</li>
                             </ul>
                         </div>
                     </div>
