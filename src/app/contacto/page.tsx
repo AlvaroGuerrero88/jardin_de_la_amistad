@@ -86,7 +86,7 @@ export default function ContactPage() {
                                 <Clock className="h-6 w-6 text-primary mr-4 mt-1" />
                                 <div>
                                     <h3 className="font-bold mb-1">Horario de Atención</h3>
-                                    <p className="text-gray-600">Lunes a Viernes: 8:00 AM - 6:00 PM</p>
+                                    <p className="text-gray-600">Lunes a Viernes: 8:00 AM - 5:00 PM</p>
                                 </div>
                             </div>
                         </div>
