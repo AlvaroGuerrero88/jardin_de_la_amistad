@@ -204,7 +204,7 @@ export default function NidoPage() {
                                 },
                                 {
                                     title: "PROGRAMA DE LECTURA EN VOZ ALTA Y BIBLIOTECA",
-                                    content: "Gracias a la implementación de bibliotecas en cada una de nuestras sedes, en nuestro institución la lectura es cosa de todos los días. La lectura en voz alta desarrolla habilidades lectoras y escritoras, y sobretodo ayuda a los niños a apasionarse por los libros​. Esta actividad es una celebración de la lectura, acompañada de rituales y ceremonias que ayudan a los niños a vivir la lectura como un momento mágico.",
+                                    content: "Gracias a la implementación de bibliotecas en cada una de nuestras sedes, en nuestra institución la lectura se ha convertido en una actividad cotidiana. La lectura en voz alta no solo fortalece las habilidades lectoras y escritoras, sino que también despierta en los niños el gusto y la pasión por los libros. Esta práctica se convierte en una verdadera celebración de la lectura, enriquecida con rituales y pequeñas ceremonias que permiten a los niños vivir cada sesión como un momento especial y mágico.",
                                     icon: "📚",
                                     color: "bg-blue-100 text-blue-600"
                                 },
@@ -238,12 +238,7 @@ export default function NidoPage() {
                                     icon: "🌟",
                                     color: "bg-teal-100 text-teal-600"
                                 },
-                                {
-                                    title: "FORMACIÓN PARA LA CONVIVENCIA Y VALORES",
-                                    content: "Este programa propone actividades en familia donde se promueve la formación y fortalecimiento de hábitos básicos, así como el reconocimiento y la expresión saludable de diversas emociones.",
-                                    icon: "❤️",
-                                    color: "bg-red-100 text-red-600"
-                                }
+
                             ].map((program, index) => (
                                 <AccordionItem
                                     key={index}
