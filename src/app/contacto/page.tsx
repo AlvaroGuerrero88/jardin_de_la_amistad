@@ -153,6 +153,10 @@ export default function ContactPage() {
                                 <input type="tel" className="w-full px-4 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-transparent outline-none" placeholder="999 888 777" />
                             </div>
                             <div>
+                                <label className="block text-sm font-medium text-gray-700 mb-1">Fecha de Nacimiento del Hijo/a</label>
+                                <input type="date" className="w-full px-4 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-transparent outline-none" />
+                            </div>
+                            <div>
                                 <label className="block text-sm font-medium text-gray-700 mb-1">Interés</label>
                                 <select className="w-full px-4 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-transparent outline-none">
                                     <option>Estimulación Temprana</option>
