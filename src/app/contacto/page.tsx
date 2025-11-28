@@ -155,10 +155,11 @@ export default function ContactPage() {
                             <div>
                                 <label className="block text-sm font-medium text-gray-700 mb-1">Interés</label>
                                 <select className="w-full px-4 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-transparent outline-none">
-                                    <option>Cuna (6 meses - 2 años)</option>
-                                    <option>Nido (3 - 5 años)</option>
+                                    <option>Estimulación Temprana</option>
+                                    <option>Cuna</option>
+                                    <option>Nido</option>
                                     <option>After School</option>
-                                    <option>Otro</option>
+                                    <option>Talleres de Verano</option>
                                 </select>
                             </div>
                             <div>
