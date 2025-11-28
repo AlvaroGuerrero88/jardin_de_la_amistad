@@ -43,11 +43,18 @@ export default function NidoPage() {
                 <div className="text-center mb-16">
                     <h2 className="text-3xl font-bold text-gray-900 mb-12">Nuestra Metodología</h2>
 
-                    <div className="flex flex-col md:flex-row items-center justify-center gap-6 mb-8">
-                        <h3 className="text-2xl md:text-3xl font-bold text-blue-600 leading-tight text-center md:text-right max-w-2xl">
-                            <span className="whitespace-nowrap">"En nuestro nido los niños vienen a</span><br />
-                            <span className="whitespace-nowrap">construir conocimiento, no a memorizarlo."</span>
-                        </h3>
+                    <blockquote className="relative p-8 mb-12 bg-orange-50 rounded-3xl border-l-8 border-[#FF7F50]">
+                        <div className="absolute top-4 left-4 text-[#FF7F50] opacity-20">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M14.017 21L14.017 18C14.017 16.896 14.321 15.923 14.929 15.081C15.537 14.239 16.354 13.536 17.38 12.971L17.38 12.721C16.946 12.763 16.504 12.784 16.054 12.784C14.688 12.784 13.521 12.35 12.554 11.481C11.588 10.613 11.104 9.471 11.104 8.054C11.104 6.621 11.596 5.463 12.579 4.579C13.563 3.696 14.754 3.254 16.154 3.254C17.621 3.254 18.838 3.754 19.804 4.754C20.771 5.754 21.254 7.054 21.254 8.654C21.254 11.021 20.471 13.254 18.904 15.354C17.338 17.454 15.708 19.338 14.017 21ZM5.017 21L5.017 18C5.017 16.896 5.321 15.923 5.929 15.081C6.537 14.239 7.354 13.536 8.38 12.971L8.38 12.721C7.946 12.763 7.504 12.784 7.054 12.784C5.688 12.784 4.521 12.35 3.554 11.481C2.588 10.613 2.104 9.471 2.104 8.054C2.104 6.621 2.596 5.463 3.579 4.579C4.563 3.696 5.754 3.254 7.154 3.254C8.621 3.254 9.838 3.754 10.804 4.754C11.771 5.754 12.254 7.054 12.254 8.654C12.254 11.021 11.471 13.254 9.904 15.354C8.338 17.454 6.708 19.338 5.017 21Z" />
+                            </svg>
+                        </div>
+                        <p className="text-2xl md:text-3xl font-serif italic text-gray-800 text-center relative z-10 leading-relaxed">
+                            "En nuestro nido los niños vienen a construir conocimiento, no a memorizarlo."
+                        </p>
+                    </blockquote>
+
+                    <div className="flex justify-center mb-12">
                         <img
                             src="/images/active-learning-logo.png"
                             alt="Active Learning Logo"
@@ -57,10 +64,10 @@ export default function NidoPage() {
 
                     <div className="max-w-4xl mx-auto text-lg text-gray-700 leading-relaxed space-y-6 text-left md:text-center">
                         <p>
-                            Active Learning es el resultado de varios años de estudios e investigación, donde los avances de la neurociencia nos invitan a dejar la “escuela tradicional” y apostar por una educación que privilegie situaciones de aprendizaje reales, donde los niños pueden manipular y explorar materiales.
+                            Nuestro Proyecto Educativo Active Learning tiene como principal objetivo fomentar un pensamiento ingenioso y flexible, capaz de resolver problemas. Creemos que el Aprendizaje Activo, a través del juego y la exploración, es fundamental para desarrollar el máximo potencial de cada niño y niña. Nuestros sectores de aprendizaje cuentan con material concreto no estructurado que permite la experiencia directa, en el que los niños juegos, conversan y se divierten mientras aprende.
                         </p>
                         <p className="mb-0">
-                            En el Jardín de la Amistad ellos juegan, conversan y se divierten mientras aprenden. Nuestro Proyecto Educativo Active Learning tiene como principal objetivo fomentar un pensamiento ingenioso y flexible, capaz de resolver problemas. Para ello, las maestras del Jardín de la Amistad a través de preguntas y múltiples materiales invitan a los niños a reflexionar, imaginar y crear en función a sus propios intereses.
+                            Por ello, las maestras del Jardín de la Amistad actúan como observadoras, creando un ambiente social que motiva al niño a explorar, moverse, escuchar y manipular, facilitando una construcción constante y significativa de su comprensión del mundo que lo rodea a través de preguntas.
                         </p>
                     </div>
                 </div>
@@ -91,69 +98,60 @@ export default function NidoPage() {
                     >
                         <h2 className="text-4xl font-bold text-gray-900 mb-8">Un día en el Nido</h2>
                         <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-                            Nuestro día está estructurado para brindar seguridad y a la vez libertad de exploración. Creemos que las rutinas amorosas son la base de la confianza.
+                            Nuestro día está organizado por una agenda diaria con actividades establecidas para brindar seguridad y a la vez libertad de exploración. Creemos que las rutinas amorosas son la base de la confianza.
                         </p>
 
                         <div className="relative pl-8 border-l-4 border-dashed border-gray-200 space-y-12">
                             {[
                                 {
-                                    time: "8:00 am",
                                     title: "Llegada y bienvenida",
                                     desc: "Los niños ingresan con alegría, guardan sus pertenencias en su casillero y se preparan para iniciar su día en un ambiente seguro y afectivo.",
                                     icon: Sun,
                                     color: "bg-yellow-100 text-yellow-600 border-yellow-200"
                                 },
                                 {
-                                    time: "8:15 am",
                                     title: "Asamblea del día",
                                     desc: "Nos reunimos en círculo para conversar, cantar, revisar el clima y expresar cómo nos sentimos. Un espacio clave para fortalecer la comunicación, la convivencia y el sentido de pertenencia.",
                                     icon: Users,
                                     color: "bg-blue-100 text-blue-600 border-blue-200"
                                 },
                                 {
-                                    time: "9:00 am",
                                     title: "Actividades pedagógicas",
                                     desc: "Damos inicio a experiencias que impulsan el pensamiento crítico, la autonomía y la creatividad. Incluye proyectos, rincones de juego, actividades de ciencia, arte, lógica y exploraciones según la edad.",
                                     icon: Brain,
                                     color: "bg-purple-100 text-purple-600 border-purple-200"
                                 },
                                 {
-                                    time: "9:45 am",
                                     title: "Inglés y música / expresión artística",
                                     desc: "Cada día integramos actividades de inglés donde aprendemos a través del juego, las canciones y las historias. Combinamos también momentos de música y expresión artística que fortalecen la creatividad, el ritmo y el lenguaje emocional.",
                                     icon: Music,
                                     color: "bg-pink-100 text-pink-600 border-pink-200"
                                 },
                                 {
-                                    time: "10:15 am",
                                     title: "Arte y creatividad",
                                     desc: "Exploramos colores, texturas, materiales naturales y técnicas variadas para fomentar la sensibilidad artística y la expresión libre.",
                                     icon: Palette,
                                     color: "bg-orange-100 text-orange-600 border-orange-200"
                                 },
                                 {
-                                    time: "10:45 am",
                                     title: "Refrigerio y conversación",
                                     desc: "Un momento tranquilo para recargar energías, conversar con los amigos y fortalecer hábitos de autonomía y convivencia.",
                                     icon: Apple,
                                     color: "bg-green-100 text-green-600 border-green-200"
                                 },
                                 {
-                                    time: "11:00 am",
                                     title: "Psicomotricidad o juego al aire libre",
                                     desc: "Sesiones de movimiento, coordinación, equilibrio y juego libre en espacios seguros. Aquí fortalecen su motricidad, confianza corporal y habilidades socioemocionales.",
                                     icon: Footprints,
                                     color: "bg-teal-100 text-teal-600 border-teal-200"
                                 },
                                 {
-                                    time: "11:30 am",
                                     title: "Lectura, cuentos y cierre del día",
                                     desc: "Cerramos la jornada con historias, canciones suaves o dinámicas de relajación. Un momento para bajar revoluciones y recoger lo vivido durante el día.",
                                     icon: BookOpen,
                                     color: "bg-indigo-100 text-indigo-600 border-indigo-200"
                                 },
                                 {
-                                    time: "12:00 pm – 1:30 pm",
                                     title: "Salida",
                                     desc: "Los niños se retiran según su horario, llevando consigo aprendizajes, vivencias y nuevas historias para compartir en casa.",
                                     icon: Home,
@@ -172,9 +170,7 @@ export default function NidoPage() {
                                         <item.icon className="w-6 h-6" />
                                     </div>
                                     <div className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
-                                        <span className={`inline-block px-3 py-1 rounded-full text-xs font-bold mb-2 ${item.color.replace('text-', 'bg-').replace('bg-', 'text-white bg-opacity-90 ')}`}>
-                                            {item.time}
-                                        </span>
+
                                         <h4 className="text-xl font-bold text-gray-900 mb-2">{item.title}</h4>
                                         <p className="text-gray-600 text-sm leading-relaxed">{item.desc}</p>
                                     </div>
@@ -198,7 +194,7 @@ export default function NidoPage() {
                             {[
                                 {
                                     title: "PROGRAMA DE LENGUAJE",
-                                    content: "Todas las mañanas dedicamos un espacio para disfrutar y aprender adivinanzas, trabalenguas, poesías, entre otros juegos lingüísticos. El elemento lúdico siempre presente en nuestras sesiones de aprendizaje posibilita la exploración y el juego con el lenguaje. Para nuestros niños el aprendizaje de canciones, chistes así como realizar ejercicios de praxias y soplo, resultan experiencias muy placenteras.",
+                                    content: "Todas las mañanas dedicamos un espacio para disfrutar y aprender adivinanzas, trabalenguas, poesías, entre otros juegos lingüísticos. El elemento lúdico siempre presente en nuestras sesiones de aprendizaje posibilita la exploración y el juego con el lenguaje. Para nuestros niños el aprendizaje de canciones, así como realizar ejercicios de praxias y soplo, resultan experiencias muy placenteras.",
                                     icon: "🗣️",
                                     color: "bg-orange-100 text-orange-600"
                                 },
@@ -222,7 +218,7 @@ export default function NidoPage() {
                                 },
                                 {
                                     title: "JUEGO-TRABAJO EN SECTORES",
-                                    content: "Los sectores de aprendizaje permiten a los niños trabajar según sus propios intereses. Todos los días nuestros niños escogen en qué sector de aprendizaje les gustaría trabajar y en función a ello investigan, juegan y aprenden en equipo. Cada sector está cuidadosamente diseñado para proporcionar experiencias retadoras y concretas a los niños, donde favorecemos el pensamiento crítitco creativo, el aprendizaje autónomo y la capacidad para la toma de decisiones.",
+                                    content: "Los sectores de aprendizaje permiten a los niños trabajar según sus propios intereses. Todos los días nuestros niños escogen en qué sector de aprendizaje les gustaría trabajar y en función a ello investigan, juegan y aprenden en equipo. Cada sector está cuidadosamente diseñado para proporcionar experiencias retadoras y concretas a los niños, donde favorecemos el pensamiento crítico creativo, el aprendizaje autónomo y la capacidad para la toma de decisiones.",
                                     icon: "🏗️",
                                     color: "bg-yellow-100 text-yellow-700"
                                 },
