@@ -51,7 +51,7 @@ export default function ContactPage() {
                                     <div className="flex items-start">
                                         <Phone className="h-5 w-5 text-gray-400 mr-3 mt-1" />
                                         <div>
-                                            <p className="text-gray-600">902 159 500</p>
+                                            <p className="text-gray-600">905 455 922</p>
                                         </div>
                                     </div>
                                 </div>
@@ -68,6 +68,7 @@ export default function ContactPage() {
                                     <div className="flex items-start">
                                         <Phone className="h-5 w-5 text-gray-400 mr-3 mt-1" />
                                         <div>
+                                            <p className="text-gray-600">01 304 2922</p>
                                             <p className="text-gray-600">902 159 500</p>
                                         </div>
                                     </div>
