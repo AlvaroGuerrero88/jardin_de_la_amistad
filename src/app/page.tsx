@@ -87,16 +87,6 @@ export default function Home() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 relative z-10">
           {[
             {
-              title: "Estimulación Temprana",
-              age: "5 meses - 36 meses",
-              description: "Desarrollo sensorial, motriz y cognitivo en un ambiente lúdico.",
-              icon: Baby,
-              href: "https://centrodeestimulaciontemprana.jardindelaamistad.edu.pe/",
-              color: "bg-yellow-50 text-yellow-600 border-yellow-100",
-              hover: "hover:bg-yellow-100",
-              iconBg: "bg-yellow-200"
-            },
-            {
               title: "Cuna",
               age: "1 - 2 años",
               description: "Cuidado amoroso y estimulación temprana en un ambiente seguro.",
@@ -125,6 +115,16 @@ export default function Home() {
               color: "bg-green-50 text-green-600 border-green-100",
               hover: "hover:bg-green-100",
               iconBg: "bg-green-200"
+            },
+            {
+              title: "Estimulación Temprana",
+              age: "5 meses - 36 meses",
+              description: "Desarrollo sensorial, motriz y cognitivo en un ambiente lúdico.",
+              icon: Baby,
+              href: "https://centrodeestimulaciontemprana.jardindelaamistad.edu.pe/",
+              color: "bg-yellow-50 text-yellow-600 border-yellow-100",
+              hover: "hover:bg-yellow-100",
+              iconBg: "bg-yellow-200"
             },
             {
               title: "Talleres de Verano",
@@ -306,3 +306,5 @@ export default function Home() {
     </div>
   );
 }
+
+// Updated program order

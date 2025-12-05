@@ -18,10 +18,10 @@ export function Footer() {
                     <div>
                         <h3 className="text-lg font-semibold mb-4 text-[#FF7F50]">Enlaces Rápidos</h3>
                         <ul className="space-y-2">
-                            <li><Link href="https://centrodeestimulaciontemprana.jardindelaamistad.edu.pe/" className="text-gray-300 hover:text-white transition-colors font-medium">Estimulación Temprana</Link></li>
                             <li><Link href="/cuna" className="text-gray-300 hover:text-white transition-colors font-medium">Cuna</Link></li>
                             <li><Link href="/nido" className="text-gray-300 hover:text-white transition-colors font-medium">Nido</Link></li>
                             <li><Link href="/after-school" className="text-gray-300 hover:text-white transition-colors font-medium">After School</Link></li>
+                            <li><Link href="https://centrodeestimulaciontemprana.jardindelaamistad.edu.pe/" className="text-gray-300 hover:text-white transition-colors font-medium">Estimulación Temprana</Link></li>
                             <li><Link href="/talleres-verano" className="text-gray-300 hover:text-white transition-colors font-medium">Talleres de verano</Link></li>
                             <li><Link href="/contacto" className="text-gray-300 hover:text-white transition-colors font-medium">Contacto</Link></li>
                         </ul>
