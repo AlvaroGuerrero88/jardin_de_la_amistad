@@ -38,38 +38,57 @@ export default function NidoPage() {
                 </div>
             </section>
 
-            {/* Methodology */}
-            <Section>
-                <div className="text-center mb-16">
-                    <h2 className="text-3xl font-bold text-gray-900 mb-12">Nuestra Metodología</h2>
-
-                    <blockquote className="relative p-8 mb-12 bg-orange-50 rounded-3xl border-l-8 border-[#FF7F50]">
-                        <div className="absolute top-4 left-4 text-[#FF7F50] opacity-20">
-                            <svg width="40" height="40" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M14.017 21L14.017 18C14.017 16.896 14.321 15.923 14.929 15.081C15.537 14.239 16.354 13.536 17.38 12.971L17.38 12.721C16.946 12.763 16.504 12.784 16.054 12.784C14.688 12.784 13.521 12.35 12.554 11.481C11.588 10.613 11.104 9.471 11.104 8.054C11.104 6.621 11.596 5.463 12.579 4.579C13.563 3.696 14.754 3.254 16.154 3.254C17.621 3.254 18.838 3.754 19.804 4.754C20.771 5.754 21.254 7.054 21.254 8.654C21.254 11.021 20.471 13.254 18.904 15.354C17.338 17.454 15.708 19.338 14.017 21ZM5.017 21L5.017 18C5.017 16.896 5.321 15.923 5.929 15.081C6.537 14.239 7.354 13.536 8.38 12.971L8.38 12.721C7.946 12.763 7.504 12.784 7.054 12.784C5.688 12.784 4.521 12.35 3.554 11.481C2.588 10.613 2.104 9.471 2.104 8.054C2.104 6.621 2.596 5.463 3.579 4.579C4.563 3.696 5.754 3.254 7.154 3.254C8.621 3.254 9.838 3.754 10.804 4.754C11.771 5.754 12.254 7.054 12.254 8.654C12.254 11.021 11.471 13.254 9.904 15.354C8.338 17.454 6.708 19.338 5.017 21Z" />
-                            </svg>
+            {/* Testimonial Section - Gabriela */}
+            <Section className="bg-white py-16">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center max-w-5xl mx-auto">
+                    <motion.div
+                        initial={{ opacity: 0, x: -20 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: true }}
+                    >
+                        <span className="inline-block py-1 px-3 rounded-full bg-orange-100 text-orange-700 text-sm font-bold mb-4">
+                            Experiencias Reales
+                        </span>
+                        <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 font-display">
+                            "Un lugar de amor y arte"
+                        </h2>
+                        <p className="text-xl text-gray-600 mb-8 leading-relaxed italic relative">
+                            <span className="absolute -top-4 -left-2 text-6xl text-orange-200 opacity-50 z-0">"</span>
+                            <span className="relative z-10">
+                                Gabriela, mamá de Salvador y Agustina, encontró en el Jardín de la Amistad un espacio lleno de calidez, amor y creatividad desde el primer día.
+                            </span>
+                        </p>
+                        <div className="flex items-center gap-4">
+                            <div className="w-16 h-16 rounded-full overflow-hidden border-2 border-white shadow-md bg-orange-100 relative">
+                                <img
+                                    src="/images/testimonials/gabriela.jpg"
+                                    alt="Gabriela"
+                                    className="object-cover w-full h-full"
+                                />
+                            </div>
+                            <div>
+                                <div className="font-bold text-gray-900">Gabriela</div>
+                                <div className="text-sm text-gray-500">Mamá de Salvador y Agustina</div>
+                            </div>
                         </div>
-                        <p className="text-2xl md:text-3xl font-serif italic text-gray-800 text-center relative z-10 leading-relaxed">
-                            "En nuestro nido los niños vienen a construir conocimiento, no a memorizarlo."
-                        </p>
-                    </blockquote>
+                    </motion.div>
 
-                    <div className="flex justify-center mb-12">
-                        <img
-                            src="/images/active-learning-logo.png"
-                            alt="Active Learning Logo"
-                            className="h-24 md:h-28 object-contain"
-                        />
-                    </div>
-
-                    <div className="max-w-4xl mx-auto text-lg text-gray-700 leading-relaxed space-y-6 text-left md:text-center">
-                        <p>
-                            Nuestro Proyecto Educativo Active Learning tiene como principal objetivo fomentar un pensamiento ingenioso y flexible, capaz de resolver problemas. Creemos que el Aprendizaje Activo, a través del juego y la exploración, es fundamental para desarrollar el máximo potencial de cada niño y niña. Nuestros sectores de aprendizaje cuentan con material concreto no estructurado que permite la experiencia directa, en el que los niños juegos, conversan y se divierten mientras aprende.
-                        </p>
-                        <p className="mb-0">
-                            Por ello, las maestras del Jardín de la Amistad actúan como observadoras, creando un ambiente social que motiva al niño a explorar, moverse, escuchar y manipular, facilitando una construcción constante y significativa de su comprensión del mundo que lo rodea a través de preguntas.
-                        </p>
-                    </div>
+                    <motion.div
+                        initial={{ opacity: 0, scale: 0.95 }}
+                        whileInView={{ opacity: 1, scale: 1 }}
+                        viewport={{ once: true }}
+                        className="flex justify-center"
+                    >
+                        <div className="relative w-full max-w-[320px] aspect-[9/16] rounded-[2rem] overflow-hidden shadow-2xl border-[6px] border-gray-900 bg-black">
+                            <iframe
+                                className="absolute inset-0 w-full h-full"
+                                src="https://www.youtube.com/embed/nR2scZifC3w"
+                                title="Testimonio Jardín de la Amistad - Gabriela"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                allowFullScreen
+                            ></iframe>
+                        </div>
+                    </motion.div>
                 </div>
             </Section>
 

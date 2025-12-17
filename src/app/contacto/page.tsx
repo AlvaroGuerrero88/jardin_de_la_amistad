@@ -9,7 +9,7 @@ export default function ContactPage() {
     return (
         <div className="min-h-screen bg-white">
             {/* Hero */}
-            <section className="relative py-20 overflow-hidden">
+            <section className="relative pt-40 pb-20 overflow-hidden">
                 {/* Background Blobs */}
                 <div className="absolute top-0 left-0 w-full h-full overflow-hidden -z-10">
                     <div className="absolute top-[-10%] right-[-5%] w-96 h-96 bg-yellow-100 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-blob" />

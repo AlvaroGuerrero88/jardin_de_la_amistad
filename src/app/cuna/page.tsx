@@ -10,7 +10,7 @@ export default function CunaPage() {
     return (
         <div className="min-h-screen bg-white">
             {/* Hero */}
-            <section className="relative py-20 bg-pink-50">
+            <section className="relative pt-40 pb-20 bg-pink-50">
                 <div className="container mx-auto px-4 md:px-8">
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
@@ -29,6 +29,60 @@ export default function CunaPage() {
                     </motion.div>
                 </div>
             </section>
+
+            {/* Featured Video Testimonial */}
+            <Section className="bg-white py-16">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center max-w-5xl mx-auto">
+                    <motion.div
+                        initial={{ opacity: 0, x: -20 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: true }}
+                    >
+                        <span className="inline-block py-1 px-3 rounded-full bg-yellow-100 text-yellow-700 text-sm font-bold mb-4">
+                            Experiencias Reales
+                        </span>
+                        <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 font-display">
+                            "Un lugar de puertas abiertas"
+                        </h2>
+                        <p className="text-xl text-gray-600 mb-8 leading-relaxed italic relative">
+                            <span className="absolute -top-4 -left-2 text-6xl text-pink-200 opacity-50 z-0">"</span>
+                            <span className="relative z-10">
+                                Marilyn, mamá de Leticia, nos cuenta cómo el Jardín de la Amistad es un lugar donde su hija aprende con libertad, rodeada de amor y confianza 💛✨ Vida práctica, aprendizaje activo y puertas siempre abiertas para las familias.
+                            </span>
+                        </p>
+                        <div className="flex items-center gap-4">
+                            <div className="w-14 h-14 rounded-full overflow-hidden border-2 border-white shadow-md relative">
+                                <img
+                                    src="/images/testimonials/marilyn.jpg"
+                                    alt="Marilyn"
+                                    className="object-cover w-full h-full"
+                                />
+                            </div>
+                            <div>
+                                <div className="font-bold text-gray-900">Marilyn</div>
+                                <div className="text-sm text-gray-500">Mamá de Leticia</div>
+                            </div>
+                        </div>
+                    </motion.div>
+
+                    <motion.div
+                        initial={{ opacity: 0, scale: 0.95 }}
+                        whileInView={{ opacity: 1, scale: 1 }}
+                        viewport={{ once: true }}
+                        className="flex justify-center"
+                    >
+                        <div className="relative w-full max-w-[320px] aspect-[9/16] rounded-[2rem] overflow-hidden shadow-2xl border-[6px] border-gray-900 bg-black">
+                            <iframe
+                                className="absolute inset-0 w-full h-full"
+                                src="https://www.youtube.com/embed/OkSEvd61_xc"
+                                title="Testimonio Jardín de la Amistad - Marilyn"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                allowFullScreen
+                            ></iframe>
+                        </div>
+                    </motion.div>
+                </div>
+            </Section>
 
             {/* Benefits */}
             <Section>

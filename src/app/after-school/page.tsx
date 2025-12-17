@@ -10,7 +10,7 @@ export default function AfterSchoolPage() {
     return (
         <div className="min-h-screen bg-white">
             {/* Hero */}
-            <section className="relative py-20 bg-green-50">
+            <section className="relative pt-40 pb-20 bg-green-50">
                 <div className="container mx-auto px-4 md:px-8">
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
