@@ -20,7 +20,7 @@ export default function Home() {
         </div>
 
         {/* Content Overlay */}
-        <div className="relative z-20 container mx-auto h-full flex flex-col justify-end items-center text-center px-4 pb-32 md:pb-40">
+        <div className="relative z-20 container mx-auto h-full flex flex-col justify-end items-center text-center px-4 pb-12 md:pb-20">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -28,9 +28,9 @@ export default function Home() {
             className="flex flex-col items-center"
           >
             {/* Admission Block */}
-            <div className="bg-white/95 backdrop-blur-sm border-2 border-white/50 px-6 py-2 rounded-lg shadow-2xl mb-6 transform hover:scale-105 transition-transform duration-300">
-              <h1 className="text-3xl md:text-5xl font-bold text-primary tracking-wide font-display">
-                ADMISIÓN 2026
+            <div className="bg-white/95 backdrop-blur-sm border-2 border-white/50 px-8 py-3 rounded-xl shadow-2xl mb-6 transform hover:scale-105 transition-transform duration-300">
+              <h1 className="text-2xl md:text-4xl font-bold text-primary tracking-wide font-display">
+                Cupos limitados – Admisión 2026
               </h1>
             </div>
 
@@ -38,9 +38,9 @@ export default function Home() {
             <Button
               asChild
               size="lg"
-              className="text-lg bg-[#FF7F50] hover:bg-[#E06030] text-white px-6 py-4 h-auto rounded-full shadow-[0_0_20px_rgba(255,127,80,0.5)] hover:shadow-[0_0_30px_rgba(255,127,80,0.7)] hover:-translate-y-1 transition-all duration-300 border-2 border-white/20"
+              className="text-lg bg-[#FF7F50] hover:bg-[#E06030] text-white px-8 py-6 h-auto rounded-full shadow-[0_0_20px_rgba(255,127,80,0.5)] hover:shadow-[0_0_30px_rgba(255,127,80,0.7)] hover:-translate-y-1 transition-all duration-300 border-2 border-white/20"
             >
-              <Link href="/contacto">Solicita más información</Link>
+              <Link href="/contacto">¡Asegura tu lugar ahora!</Link>
             </Button>
           </motion.div>
         </div>
@@ -211,7 +211,7 @@ export default function Home() {
       </section>
 
       {/* Methodology Section - Moved from Nido */}
-      <section className="w-full bg-orange-50/50 relative overflow-hidden py-32">
+      <section className="w-full bg-orange-50/50 relative overflow-hidden pt-32 pb-12">
         {/* Decorative background elements */}
         <div className="absolute top-0 right-0 w-64 h-64 bg-orange-100 rounded-full mix-blend-multiply filter blur-3xl opacity-50 translate-x-1/2 -translate-y-1/2" />
         <div className="absolute bottom-0 left-0 w-80 h-80 bg-yellow-100 rounded-full mix-blend-multiply filter blur-3xl opacity-50 -translate-x-1/2 translate-y-1/2" />
@@ -250,6 +250,49 @@ export default function Home() {
                     Las maestras actúan como guías y observadoras, creando un ambiente que motiva al niño a explorar, moverse y preguntar, facilitando una construcción constante y significativa de su comprensión del mundo.
                   </p>
                 </div>
+
+                {/* New Literacy Video Section */}
+                <div className="mt-20 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center text-left">
+                  {/* Video Column */}
+                  <div className="relative order-2 lg:order-1">
+                    <div className="absolute -inset-4 bg-[#FF7F50] rounded-[2rem] -rotate-3 opacity-20 blur-sm"></div>
+                    <div className="absolute -inset-4 bg-yellow-300 rounded-[2rem] rotate-2 opacity-30 blur-sm"></div>
+                    <div className="relative rounded-[2rem] overflow-hidden border-4 border-white shadow-2xl bg-black aspect-video transform hover:scale-[1.02] transition-transform duration-500">
+                      <iframe
+                        className="w-full h-full"
+                        src="https://www.youtube.com/embed/aMCu9PPvWzM"
+                        title="Enfoque Socioconstructivista de la Lectura y Escritura"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowFullScreen
+                      ></iframe>
+                    </div>
+                    {/* Decorative playful elements */}
+                    <div className="absolute -bottom-6 -left-6 bg-white p-3 rounded-full shadow-lg border-2 border-orange-100 hidden md:block animate-bounce delay-1000">
+                      <span className="text-3xl">✍️</span>
+                    </div>
+                    <div className="absolute -top-6 -right-6 bg-white p-3 rounded-full shadow-lg border-2 border-yellow-100 hidden md:block animate-pulse">
+                      <span className="text-3xl">🧩</span>
+                    </div>
+                  </div>
+
+                  {/* Text Column */}
+                  <div className="order-1 lg:order-2">
+                    <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6 flex items-center gap-3">
+                      <span className="bg-orange-100 p-2 rounded-lg text-[#FF7F50]">
+                        <BookOpen className="h-6 w-6" />
+                      </span>
+                      Lectura y Escritura
+                    </h3>
+
+                    <div className="space-y-6 text-gray-700 leading-relaxed">
+                      <p>
+                        Las prácticas de lectura y escritura responden a un enfoque <strong className="text-[#FF7F50]">socioconstructivista y funcional</strong>. Para nosotros, el objetivo en educación inicial <span className="font-bold underline decoration-wavy decoration-yellow-400">NO</span> es que los niños dominen el sistema de escritura, lo más importante es que se sientan capaces de hacer uso del lenguaje.
+                      </p>
+
+
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </ScrollAnimation>
@@ -257,7 +300,7 @@ export default function Home() {
       </section>
 
       {/* Nuestras Sedes */}
-      <section className="w-full bg-gray-50 py-24">
+      <section className="w-full bg-gray-50 py-16">
         <div className="container mx-auto px-4 md:px-8 max-w-7xl">
           <ScrollAnimation direction="right">
             <div className="text-center mb-16">

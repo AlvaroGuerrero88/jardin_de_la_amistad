@@ -12,8 +12,8 @@ const navLinks = [
     { name: "Cuna", href: "/cuna" },
     { name: "Nido", href: "/nido" },
     { name: "After School", href: "/after-school" },
-    { name: "Estimulación", href: "https://centrodeestimulaciontemprana.jardindelaamistad.edu.pe/" },
     { name: "Verano", href: "/talleres-verano" },
+    { name: "Inscripción", href: "/ficha-inscripcion" },
     { name: "Contacto", href: "/contacto" },
     { name: "Blog", href: "/blog" },
 ];
